@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VR experience</title>
-
+    <link rel="icon" href="image/favicon.ico">
     <!-- css links -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -28,12 +29,117 @@
         </div>
       </div>
     </header>
+    <!-- form -->
+    <!-- Modal -->
+    <div class="modal fade" id="popup-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <form action="">
+          <div class="modal-content">
+            <!-- <div class="modal-body"> -->
+              <div class="form-boxes">
+                <h4>Step 1: Enter Your Personal Details</h4>
+                <div class="row form-content-div">
+                  <h5>Lorem imsm</h5>
+                  <div class="col-md-12 personal-content-items">
+                    <label for="">First Name*</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="col-md-12 personal-content-items">
+                    <label for="">Last Name*</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="col-md-12 personal-content-items">
+                    <label for="">Email*</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="col-md-12 personal-content-items">
+                    <label for="">Company*</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="action-div">
+                    <div class="button-action">
+                      <input type="button" value="NEXT" class="primary-button form-next-input next"></input>
+                    </div>
+                    <div class="warning-text">
+                      <span>
+                        If you need any support, or if you have any questions, please contact our support team <a href="">here</a>.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <!-- step 2 -->
+              <div class="form-boxes">
+                <h4>Step 2: Enter Your Mailing Address</h4>
+                <div class="row form-content-div">
+                  <h5>Lorem imsm</h5>
+                  <div class="col-md-12 personal-content-items">
+                    <label for="">Street*</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="col-md-12 personal-content-items">
+                    <label for="">City*</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="col-md-12 personal-content-items">
+                    <label for="">Postal Code*</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="col-md-12 personal-content-items">
+                    <label for="">Country*</label>
+                    <input type="text" class="form-control">
+                  </div>
+
+                  <div class="action-div">
+                    <div class="button-action">
+                      <input type="button" value="PREVIOUS" class="secondary-button form-previous-input previous"></input>
+                      <input type="button" value="NEXT" class="primary-button form-next-input next"></input>
+                    </div>
+                    <div class="warning-text">
+                      <span>
+                        If you need any support, or if you have any questions, please contact our support team <a href="">here</a>.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- step 3 -->
+              <div class="form-boxes">
+                <h4>Step 3: Choose Your Date and Time</h4>
+                <div class="row form-content-div">
+                  <h5>Select Date and Time</h5>
+                  <div class="col-md-12 calendar-content-items">
+                    <!-- Calendly inline widget begin -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/israel-sunuwar/60min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:630px;"></div>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    <!-- Calendly inline widget end -->
+                  </div>
+
+                  <div class="action-div">
+                    <div class="button-action">
+                      <input type="button" value="PREVIOUS" class="secondary-button form-previous-input previous"></input>
+                      <input type="submit" value="SUBMIT" class="primary-button form-submit-input submit"></input>
+                    </div>
+                    <div class="warning-text">
+                      <span>
+                        If you need any support, or if you have any questions, please contact our support team <a href="">here</a>.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- </div> -->
+          </div>
+        </form>
+      </div>
+    </div>
     <!-- banner-content -->
     <div class="banner-div">
       <div class="container">
         <h1 class="banner-heading">Transform Your Perspective</h1>
         <h5 class="banner-short">Harness the power of virtual reality and see a new world of possibility</h5>
-        <button class="banner-button primary-button" id="reserve-spot">
+        <button type="button" class="banner-button primary-button" id="reserve-spot" data-toggle="modal"  data-target="#popup-modal">
           RESERVE YOUR SPOT
         </button>
       </div>
@@ -46,7 +152,7 @@
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
             standard dummy text ever since the 1500s, make it a future.
           </p>
-          <button class="primary-button descrip-button" id="reserve-spot">
+          <button type="button" class="descrip-button primary-button" id="reserve-spot" data-toggle="modal"  data-target="#popup-modal">
             RESERVE YOUR SPOT
           </button>
           <p class="overview-descrip">
@@ -60,9 +166,10 @@
     <!-- content -->
     <div class="bio">
       <div class="container content-section">
-        <div class="row">
+        <div class="row timeline">
+          <!-- <div class="timeline"></div> -->
           <div class="col-md-6 avatar-div">
-            <img src="assets/c.png" alt="" class="avatar-img">
+            <img src="assets/avatar-1.png" alt="" class="avatar-img">
           </div>
           <div class="col-md-6 content-details">
             <h2>Immerse Yourself</h2>
@@ -80,7 +187,8 @@
             </p>
           </div>
         </div>
-        <div class="row content-row">
+        <div class="row timeline content-row">
+          <!-- <div class="timeline"></div> -->
           <div class="col-md-6 content-details">
             <h2>Become A New You</h2>
             <h4>Create your personal avatar as you explore a new world</h4>
@@ -91,12 +199,13 @@
             </p>
           </div>
           <div class="col-md-6 avatar-right-div">
-            <img src="assets/a.png" alt="" class="right-avatar-img avatar-img">
+            <img src="assets/avatar-2.png" alt="" class="right-avatar-img avatar-img">
           </div>
         </div>
-        <div class="row content-row">
+        <div class="row timeline content-row">
+          <!-- <div class="timeline"></div> -->
           <div class="col-md-6 avatar-div">
-            <img src="assets/b.png" alt="" class="avatar-img">
+            <img src="assets/avatar-3.png" alt="" class="avatar-img">
           </div>
           <div class="col-md-6 content-details">
             <h2>Start your virtual Voyage</h2>
@@ -116,26 +225,25 @@
             </ul>
           </div>
         </div>
-        <div class="center-item">
-          <button class="content-button primary-button" id="reserve-spot">
-            RESERVE YOUR SPOT
-          </button>
-        </div>
+      </div>
+      <div class="center-item">
+        <button type="button" class="content-button primary-button" id="reserve-spot" data-toggle="modal"  data-target="#popup-modal">
+          RESERVE YOUR SPOT
+        </button>
       </div>
     </div>
     <footer>
       <div class="div-footer">
         <p class="footer-links">
-          <a href="" class="footer-link-item">General Conditions</a> <span>|</span>
-          <a href="" class="footer-link-item">Privacy Policy</a> <span>|</span>
-          <a href="" class="footer-link-item">Legal Notice</a> <span>|</span>
+          <a href="" class="footer-link-item">General Conditions</a> <span class="footer-link-span">|</span>
+          <a href="" class="footer-link-item">Privacy Policy</a> <span class="footer-link-span">|</span>
+          <a href="" class="footer-link-item">Legal Notice</a> <span class="footer-link-span">|</span>
           <a href="" class="footer-link-item">Contact Us</a>
         </p>
       </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
+    <div id="overlay"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
       crossorigin="anonymous"></script>
