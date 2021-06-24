@@ -16,22 +16,24 @@
   </head>
   <body>
     <header class="header-div">
-      <div class="container">
-        <div class="left-header">
-          <a href="index.html" target="_blank">
-            <img src="assets/Dell-Tech-Blue-Grey-logo.png" alt="" class="left-img">
-          </a>
-        </div>
-        <div class="right-header">
-          <a href="" target="_blank">
-            <img src="assets/Win10Pro.png" alt="" class="right-img">
-          </a>
+      <div class="container head-div">
+        <div class="justify-content-between align-items-center navbar navbar-expand-lg">
+          <div class="left-header ">
+            <a href="index.html" target="_blank">
+              <img src="assets/Dell-Tech-Blue-Grey-logo.png" alt="" class="left-img">
+            </a>
+          </div>
+          <div class="right-header">
+            <a href="" target="_blank">
+              <img src="assets/Win10Pro.png" alt="" class="right-img">
+            </a>
+          </div>
         </div>
       </div>
     </header>
     <!-- form -->
     <!-- Modal -->
-    <div class="modal fade" id="popup-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal custom-backdrop fade" id="popup-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <form action="">
           <div class="modal-content">
@@ -42,23 +44,27 @@
                   <h5>Lorem imsm</h5>
                   <div class="col-md-12 personal-content-items">
                     <label for="">First Name*</label>
-                    <input type="text" class="form-control">
+                    <input type="text" required class="form-control"  id="f_name">
+                    <label class="error custom-error"  id="f_name_error" style="display: block;"></label>
                   </div>
                   <div class="col-md-12 personal-content-items">
                     <label for="">Last Name*</label>
-                    <input type="text" class="form-control">
+                    <input type="text" required class="form-control" id="l_name" >
+                    <label class="error custom-error" id="l_name_error" style="display: block;"></label>
                   </div>
                   <div class="col-md-12 personal-content-items">
                     <label for="">Email*</label>
-                    <input type="text" class="form-control">
+                    <input type="email" required class="form-control" id="email" >
+                    <label class="error custom-error" id="email_error" style="display: block;"></label>
                   </div>
                   <div class="col-md-12 personal-content-items">
                     <label for="">Company*</label>
-                    <input type="text" class="form-control">
+                    <input type="text" required class="form-control" id="company">
+                    <label class="error custom-error" id="company_error" style="display: block;"></label>
                   </div>
                   <div class="action-div">
                     <div class="button-action">
-                      <input type="button" value="NEXT" class="primary-button form-next-input next"></input>
+                      <input type="button" value="NEXT" class="primary-button form-next-input next" id="next1"></input>
                     </div>
                     <div class="warning-text">
                       <span>
@@ -76,25 +82,29 @@
                   <h5>Lorem imsm</h5>
                   <div class="col-md-12 personal-content-items">
                     <label for="">Street*</label>
-                    <input type="text" class="form-control">
+                    <input type="text" required class="form-control" id="street">
+                    <label class="error custom-error-2" id="street_error" style="display: block;"></label>
                   </div>
                   <div class="col-md-12 personal-content-items">
                     <label for="">City*</label>
-                    <input type="text" class="form-control">
+                    <input type="text" required class="form-control" id="city">
+                    <label class="error custom-error-2" id="city_error" style="display: block;"></label>
                   </div>
                   <div class="col-md-12 personal-content-items">
                     <label for="">Postal Code*</label>
-                    <input type="text" class="form-control">
+                    <input type="text" required class="form-control" id="postal">
+                    <label class="error custom-error-2" id="postal_error" style="display: block;"></label>
                   </div>
                   <div class="col-md-12 personal-content-items">
                     <label for="">Country*</label>
-                    <input type="text" class="form-control">
+                    <input type="text" required class="form-control" id="country">
+                    <label class="error custom-error-2" id="country_error" style="display: block;"></label>
                   </div>
 
                   <div class="action-div">
                     <div class="button-action">
                       <input type="button" value="PREVIOUS" class="secondary-button form-previous-input previous"></input>
-                      <input type="button" value="NEXT" class="primary-button form-next-input next"></input>
+                      <input type="button" value="NEXT" class="primary-button form-next-input next" id="next2"></input>
                     </div>
                     <div class="warning-text">
                       <span>
@@ -118,7 +128,6 @@
                   <div class="action-div">
                     <div class="button-action">
                       <input type="button" value="PREVIOUS" class="secondary-button form-previous-input previous"></input>
-                      <input type="submit" value="SUBMIT" class="primary-button form-submit-input submit"></input>
                     </div>
                   </div>
                 </div>
@@ -131,35 +140,42 @@
     <!-- banner-content -->
     <div class="banner-div">
       <div class="container">
-        <h1 class="banner-heading">Transform Your Perspective</h1>
-        <h5 class="banner-short">Harness the power of virtual reality and see a new world of possibility</h5>
-        <button type="button" class="banner-button primary-button" id="reserve-spot" data-toggle="modal"  data-target="#popup-modal">
-          RESERVE YOUR SPOT
-        </button>
+        <div class="banner-overlay"></div>
+        <div class="row align-items-center">
+          <div class="col-md-9 col-lg-8 col-xl-6">
+            <div class="banner-content">
+              <h1 class="banner-heading">Transform Your Perspective</h1>
+              <h5 class="banner-short">Harness the power of virtual reality and see a new world of possibility.</h5>
+              <button type="button" class="banner-button primary-button" id="reserve-spot" data-toggle="modal"  data-target="#popup-modal">
+                RESERVE YOUR SPOT
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- about-description -->
     <div class="description-section">
       <div class="container">
-        <div class="description-content">
-          <p class="text-content">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-            standard dummy text ever since the 1500s, make it a future. since the 1500s, when an unknown printer took a galley of type and scramble.
-          </p>
-          <button type="button" class="descrip-button primary-button" id="reserve-spot" data-toggle="modal"  data-target="#popup-modal">
-            RESERVE YOUR SPOT
-          </button>
-          <p class="overview-descrip">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-            make. idfbvib bdifuba iabu. since the 1500s, when an unknown printer took a galley of type and scrambled it to
-            make. idfbvib bdifuba iabu.
-          </p>
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="content-div">
+              <p class="text-content">
+                Enter a new dimension of Dell and immerse yourself in innovation. Equipped with cutting-edge virtual reality technology, you can get a glimpse of powerful Dell products and solutions from the comfort of your home or office.
+              </p>
+              <button type="button" class="descrip-button primary-button" id="reserve-spot" data-toggle="modal"  data-target="#popup-modal">
+                RESERVE YOUR SPOT
+              </button>
+              <p class="overview-descrip">
+                Not only can you see Dell technology in a completely new way, you can transform how you look at the possibilities of tomorrow. From VR technology to exciting new innovation, you’ll be able to uncover new perspectives and unleash exciting opportunities that can enhance your IT operations as you move into the future.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <!-- content -->
-    <div class="bio">
+    <section class="bio description-section">
       <div class="container content-section">
         <div class="row">
           <div class="timeline"></div>
@@ -168,17 +184,12 @@
           </div>
           <div class="col-md-6 content-details">
             <h2>Immerse Yourself</h2>
-            <h4>Immerse Yourself into the world</h4>
+            <h4>Get innovative insights from a Dell expert.</h4>
             <p class="details-top">
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-              letters, as opposed to using 'Content here, content here', making it look like readable English. editors
-              now use Lorem Ipsum as their default model editors now use Lorem Ipsum as their default model.
+              You already know the power and value of Dell solutions. Now it’s time to take a look at our latest game-changing innovations by immersing yourself in a new world. Guided by a Dell expert, you’ll see new products up close. Along the way, you’ll get in-depth knowledge and dynamic insights into what these solutions can do – and how they can benefit your operations.
             </p>
             <p>
-              Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and
-              a search for 'lorem ipsum' will uncover many web sites still in their editors now use Lorem Ipsum as their
-              default model editors now use Lorem Ipsum as their default model
+              Not only can this one-of-a-kind experience let you see future possibilities with Dell solutions, it also lets you see how VR technology could be implemented into your work environment. Combined, you can stay at the forefront of innovative strategies and systems.
             </p>
           </div>
         </div>
@@ -186,14 +197,12 @@
           <div class="timeline"></div>
           <div class="col-md-6 content-details">
             <h2>Become A New You</h2>
-            <h4>Create your personal avatar as you explore a new world</h4>
+            <h4>Create your personal avatar as you explore a new world.</h4>
             <p class="details-top">
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-              letters, as opposed.
+              Before entering the Dell parallel universe, you’ll have the chance to create your personal avatar. As you navigate this virtual world, you can use your VR headset to engage your sense like never before. And as a one-on-one experience, you can ask questions and dive deeper into technological insights.
             </p>
           </div>
-          <div class="col-md-6 avatar-right-div">
+          <div class="col-md-6 avatar-div">
             <img src="assets/avatar-2.png" alt="" class="right-avatar-img avatar-img">
           </div>
         </div>
@@ -204,19 +213,14 @@
           </div>
           <div class="col-md-6 content-details">
             <h2>Start your virtual Voyage</h2>
-            <h4>Immerse Yourself into VR</h4>
+            <h4>Get step-by-step details on your experience.</h4>
             <p class="details-top">
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-              letters, as opposed to using.
+              The entire Dell virtual reality experience is completely hassle-free. Simply choose a date and time for your appointment, then confirm your reservation via email. After that, we’ll do the rest.
             </p>
             <ul>
-              <li>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-                letters, as opposed</li>
-              <li>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-                letters, as opposed</li>
-              <li>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-                letters, as opposed</li>
+              <li>A few days before your experience, we’ll send a VR kit, Dell workstation and instruction pamphlet to your mailing address.</li>
+              <li>On the day of your experience, use the personal link provided to enter your virtual world.</li>
+              <li>After the experience, we’ll collect your gear. No mailing is required by you.</li>
             </ul>
           </div>
         </div>
@@ -226,13 +230,13 @@
           RESERVE YOUR SPOT
         </button>
       </div>
-    </div>
+    </section>
     <footer>
       <div class="div-footer">
         <p class="footer-links">
           <a href="condition.html" class="footer-link-item">General Conditions</a> <span class="footer-link-span">|</span>
-          <a href="condition.html" class="footer-link-item">Privacy Policy</a> <span class="footer-link-span">|</span>
-          <a href="condition.html" class="footer-link-item">Legal Notice</a> <span class="footer-link-span">|</span>
+          <a href="" class="footer-link-item">Privacy Policy</a> <span class="footer-link-span">|</span>
+          <a href="" class="footer-link-item">Legal Notice</a> <span class="footer-link-span">|</span>
           <a href="contact.html" class="footer-link-item">Contact Us</a>
         </p>
       </div>
